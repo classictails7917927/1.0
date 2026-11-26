@@ -1,0 +1,12 @@
+name: Build Single HTML
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx -y html-inline -i editor.html -o snail-editor.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: snail-editor
+          path: snail-editor.html
