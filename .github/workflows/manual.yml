@@ -9,4 +9,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: snail-editor
-          path: snail-editor.html
+          path: editor.html
